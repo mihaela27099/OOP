@@ -1,0 +1,50 @@
+Szocs Mihaela-Felicia 331CB
+===================================
+Am inceput prin a crea clasele User, Questions, Quizzes toate avand gettere si settere.
+In clasa Questions am creat si clasa Answers cu paramentrii de care aveam nevoie. Toate static id urile statice sunt
+pentru a retine un id general neapartinand de fiecare obiect in sine, apartie tuturor userilor si e incrementat
+pentru fiecare user.
+===================================
+1. Creare utilizator
+Verific daca argumentul 1 al comenzii este "-create-user". Tratez mai intai erorile, daca argumentul
+urmator este "-u"/"-p" dupa caz solicit utilizatorului sa genereze un username ssau o parola si in caz contrar returnez
+eroarile cum ca nu au fost furnizate. Daca totul a mers bine, nu se intra pe niciun if si se adauga username ul si parola
+2.Creare intrebare
+Verific daca argumentul 1 al comenzii e "-create-question". Vad daca s-au furnizat username si parola. Daca nu
+cer autentificarea utilizatorului. In aceeasi idee verific si daca parola introdusa sau username ul
+sunt gresite. Caut intre textul intrebarilor si verific daca exista texul din argumente. Caut daca
+exista raspuns in raspunsuri, numar, iar daca e doar unul sau sunt mai mult decat 5 retunez erorile
+in cauza. Daca nu exista nimic un argument dupa "-text" returnez ca intrebarea nu are text descriptiv.
+Verific si restul erorilor intre argumente si intrebari, iar daca totul a mers bine furnizez utilizatorului
+ca intrebarea s-a creat cu succes.
+3. Întoarce identificator întrebare după nume
+Verific daca argumentul1 este "get-question-id-by-text". Verific daca au fost furnizate username si parola,
+returnez eroare daca u. Idem pt username sau parola gresite. Caut intrebarea dupa text daca nu exista in
+argumente return eroare. Daca totul a mers bine returnez intrebarea cu id ul solicitat.
+4. Intoarce toate intrebarile din sistem.
+Verific daca argumentul1 este "–get-all-questions". Verific iar daca utilizatorul este
+logat sau nu, daca s-a introdus un username inexistent, gresit ssau o parola gresita.
+Daca totul a mers bine returnez toate intrebarile din sistem.
+5. Creare chestionar
+Verific daca argumentul1 este "–create-quizz". Caut ca de fiecare data daca am username, parola
+furnizate si daca sunt create, returnez eroare in caz contrar. Caut in argumente daca exista intrebarea
+cu acelasi nume, returnez eroare. Caut in toate id urile intrebarilor. Am un bool care verifica dac
+intrebarea cu ID i exista , daca ramane fals returnez eroarea. Trec prin intrebarile chestionarului numarandu-le
+iar daca sunt mai mult decat zece returnez err.Daca totul a mers bine creez chestionarul cu succes.
+6.Intoarce identificator chestionar după nume
+Aceleasi verificari ca anterior.
+7.Întoarce toate chestionarele din sistem
+Idem, interesant am vazut crearea unei liste ce retine id urile userilor care au completat chestionarul,
+astfel determinand si forma sub care se doreste afisarea mesajului (impreuna cu mentiunea is completed
+sau nu) - a durat mult
+8.Întoarce detaliile unui chestionar în funcție de identificator
+La fel erorile. Aceiasi idee la afisare detalii intrebari, fac un fel de toString care imi scrie in
+formatul solicitat in document.
+9.Incarcă răspunsuri chestionar
+Aici am stat cel mai mult, nu am reusit sa rezolv cu scorul. Primele 3 erori ca mai sus. Pt a 4 a eroare
+caut intre ID uri si daca nu exista returnez ca nu s a gasit ID UL RASPUNSULUI.(returnam alt id by mistake).
+Verific daca ID ul utilizatorului curent este ID ul utilizatorului care a creat chestionarul ( eroare daca nu).
+Calcul puncte nu iese:(.
+10. Ștergere chestionar---nu e dificil
+11. Întoarce soluțiile mele---nu am intampinat probleme
+12. Curăță date din aplicație---cel mai iubit task

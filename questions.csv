@@ -1,0 +1,4 @@
+id,text,eSingle,raspunsuri
+1,Cerul e albasru?,false,da|true;nu|false
+2,Temperatura se poatemasura in?,false,celsius|true;litri|false;farenheit|true
+3,foame?,true,da|true;nu|false
